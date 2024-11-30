@@ -1,0 +1,9 @@
+#album-container img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#album-container img:hover {
+    transform: scale(1.05);
+}

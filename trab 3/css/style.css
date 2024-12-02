@@ -1,0 +1,72 @@
+body {
+  background-color: #f8f9fa;
+}
+
+#discosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.disco img {
+  width: 500px; 
+  height: 500px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.disco img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f3f3f3; 
+  border-top: 6px solid #3498db; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expandShrink {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.5);
+  }
+}
+
+
+
+
+
+
+
+
